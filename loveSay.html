@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <link href='//cdn.webfont.youziku.com/webfonts/nomal/89484/46719/57aacee3f629d80d603e33cd.css' rel='stylesheet' type='text/css' />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        /*为body设置固定宽度可以在页面缩小宽度是出现横向滚动条且文字不会换行*/
+        body{
+            width:1366px;
+            font-family:"喵小姐简";
+        }
+        #wel{
+            width:100%;
+            height:35px;
+            background-color:#323436;
+            color:#999999;
+        }
+        #wel span{
+            font-size:small;
+            line-height:35px;
+            vertical-align:middle;
+            margin-left:70px;
+        }
+        #wel a{
+            padding:0;
+            display:block;
+            height:35px;
+            float:right;
+            color:#999999;
+            font-size:12px;
+            line-height:35px;
+            vertical-align:middle;
+            margin-right:70px;
+            margin-top:-5px;
+        }
+        #wel a:hover{
+            color:#2b669a;
+        }
+        a{
+            text-decoration:none;
+        }
+        a:hover{
+            cursor:pointer;
+            text-decoration:none;
+        }
+        ul li{
+            list-style-type:none;
+            float:left;
+        }
+        #bottom{
+            width:100%;
+            height:50px;
+            background-color:#2c2e30;
+        }
+        #bottom p{
+            color:white;
+            font-size:14px;
+            line-height:50px;
+            text-align:center;
+        }
+        #logo{
+            width:100%;
+            height:100px;
+        }
+        #logo img{
+            height:100px;
+            /*margin-top:20px;*/
+            margin-left:70px;
+        }
+        #logo ul{
+            float:right;
+            margin-right:70px;
+        }
+        #logo ul li{
+            font-size:16px;
+            color:#ab9f9f;
+            font-weight:bold;
+            height:100px;
+            line-height:100px;
+        }
+        #logo ul li .glyphicon-tags{
+            font-size:24px;
+            color:#fec9c9;
+        }
+        #nav{
+            width:100%;
+            height:58px;
+            background-color:#f6f6f6;
+            border:4px dashed lightpink;
+            border-right:none;
+            border-left:none;
+            box-shadow:0 0 10px gray;
+        }
+        #nav ul{
+            width:710px;
+            height:58px;
+            margin-left:80px;
+        }
+        #nav ul li{
+            width:100px;
+        }
+        #nav ul li a{
+            display:block;
+            width:100px;
+            color:black;
+            text-decoration:none;
+            font-size:16px;
+            font-weight:bold;
+            line-height:58px;
+        }
+        #nav ul li a:hover{
+            color:#fda4a4;
+        }
+        #nav .change a{
+            color:#fda4a4;
+        }
+        #con{
+            width:80%;
+            height:600px;
+            margin:60px auto;
+            border:4px dashed pink;
+            padding:30px 40px;
+            font-size:16px;
+            text-indent: 2em;
+            font-family:"黑体" ;
+            box-shadow:0 0 10px gray;
+        }
+        #con p{
+            line-height:28px;
+        }
+        </style>
+</head>
+<body>
+<div id="all">
+<div id="wel">
+    <a id="weibo" class="btn" data-toggle="popover" data-placement="bottom">
+        <span class="glyphicon glyphicon-gift" aria-hidden="true">&nbsp;微博：郑爽工作室</span>
+    </a>
+    <span>嘿，欢迎来到wuli大脑壳的个站~</span>
+</div>
+<div id="logo">
+    <img src="image/logo.png">
+    <ul>
+        <li>
+            <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+            <span>&nbsp;大脑壳&nbsp;</span>
+        </li>
+        <li>
+            <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+            <span>&nbsp;小爽&nbsp;</span>
+        </li>
+        <li>
+            <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+            <span>&nbsp;爽妹&nbsp;</span>
+        </li>
+        <li>
+            <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+            <span>&nbsp;爽姐&nbsp;</span>
+        </li>
+    </ul>
+</div>
+<div id="nav">
+    <ul>
+        <li><a href="index.html">简介</a></li>
+        <li><a href="TV.html">电视剧</a></li>
+        <li><a href="movie.html">电影</a></li>
+        <li><a href="zong.html">综艺</a></li>
+        <li><a href="show.html">真人秀</a></li>
+        <li><a href="B.html">B站剪辑</a></li>
+        <li class="change"><a href="loveSay.html">作者说</a></li>
+    </ul>
+</div>
+<div id="con">
+<h2>程序媛·真·单身ape贵族·正版说</h2>
+    <p>给善良、美丽、可爱、勤劳、勇敢的爽妹纸：</p>
+    <p>爱你是一种缘分：以前是知道你，后来偶然看到你的采访，我就想，这是一个不错的女孩子。
+    我爱你，从你的言词行为开始；接着是你的《相爱穿梭千年》，标准的理工女找不出别的形容词，就是觉得这部电视剧你演的很好，挺好看的，
+        我开始欣赏你的作品；娱乐圈我不了解但网络我知道，真真假假黑白颠倒多得是不需要负责的言论，尊重你的选择开不开微博都挺好的，
+        我们陪你成长；我曾说过：程序媛最大的爱就是测试代码都是你的相关词。码农一个别的也不在行就想在一个特殊的日子里给你一
+        份我自己创作的礼物（你说让正版好好专注自己的专业，我就用自己的专业给你一份礼物，我们一同成长......PS：
+        爽，商量下，我是技术工种，忽略我这个渣设计吧，设计不好看我没办法啊，臣妾做不到啊T_T），也没想好要怎么给你,
+    放到网盘里@工作室也不知道爽你能不能看到T_T。<br>
+        刚刚毕业迈入社会技术也不娴熟，先给你做一个纯web的，希望以后做出一个专属你的网站，我们正版一起在里面玩耍给你
+        留言，你有空就跟我们互互动，啊~想想就觉得很美好啊捂脸⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄。<br>
+        唔，最后，其实我自己也知道这样一个纯web的网页合集并没有什么用没有高大上的设计也没有后台交互数据只能自己静静欣赏T_T心好累。不管怎么样
+        时间有限先做这个给你我会努力把真正的网站做出来的，握拳！<br>
+    </p>
+    <p> 我是你的正版，希望你一直快乐健康能够出演更棒的作品成为更好的你，加油么么哒(づ￣ 3￣)づ！</p>
+    <br>
+    <p>给可爱的正版们：</p>
+    <p>爱一个人很容易，爱一个人很难，我们只要专心爱爽做好自己的事情就好；人森已经辣么艰难，好不容易找到一群志同道合的小伙伴
+    ，一起成为进击の正版吧O(∩_∩)O！</p>
+
+</div>
+<div id="bottom">
+    <p>copyRight@2016 by 辣姐什么鬼</p>
+</div>
+</div>
+<script>
+    $('#weibo').popover({
+        trigger : 'hover',//鼠标以上时触发弹出提示框
+        html:true,//开启html 为true的话，data-content里就能放html代码了
+        content:"<img src='image/weibo.png' style='width:200px;height:100px;'>"
+    });
+    $("#nav ul li").click(function(){
+        $("#nav ul li").eq($(this).index()).addClass("change").siblings().removeClass("change");
+    })
+
+</script>
+</body>
+</html>

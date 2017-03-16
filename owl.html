@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .load{
+            width:400px;height:100px;position:absolute;top:100px;left:400px;border:1px solid green;
+        }
+        .load .owl{
+            position:relative;
+            width:210px;
+            height:108px;
+            background:url(image/owl.png) no-repeat;
+        }
+        .load .owl .arms{
+            width:34px;
+            height:25px;background:#472d20;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            position:absolute;
+            bottom:-3px;
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+        .load .owl .arm-left{left:15px;}
+        .load .owl .arm-right{right:10px;}
+        .load .owl .wings{
+            position:absolute;
+            width:100%;
+            bottom:9px;height:41px;
+            overflow: hidden;
+        }
+        .load .owl .wings>div{
+            width:40px;
+            height:65px;
+            position: absolute;
+            background: url(image/wing.png);
+            -webkit-transform: translateY(40px);
+            -moz-transform: translateY(40px);
+            -ms-transform: translateY(40px);
+            -o-transform: translateY(40px);
+            transform: translateY(40px);
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+        .load .owl .wing-left{left:15px;}
+        .load .owl .wing-right{
+            right:10px;
+            -webkit-transform: rotate(180deg) translateY(40px);
+            -moz-transform: rotate(180deg) translateY(40px);
+            -ms-transform: rotate(180deg) translateY(40px);
+            -o-transform: rotate(180deg) translateY(40px);
+            transform: rotate(180deg) translateY(40px);
+        }
+        .load .string{
+            width:210px;
+            height:10px;
+            margin-top:-20px;
+            border-bottom:3px solid #000;
+        }
+        .load .owl-hover>.arm-left{
+            -webkit-transform: translate3d(51px, -18px, 0);
+            -moz-transform: translate3d(51px, -18px, 0);
+            -ms-transform: translate3d(51px, -18px, 0);
+            -o-transform: translate3d(51px, -18px, 0);
+            transform: translate3d(51px, -18px, 0);
+        }
+        .load .owl-hover>.arm-right{
+            -webkit-transform: translate3d(-47px, -19px, 0);
+            -moz-transform: translate3d(-47px, -19px, 0);
+            -ms-transform: translate3d(-47px, -19px, 0);
+            -o-transform: translate3d(-47px, -19px, 0);
+            transform: translate3d(-47px, -19px, 0);
+        }
+        .load .owl-hover>.wings>.wing-left{
+            -webkit-transform: translate3d(50px, 0px, 0);
+            -moz-transform: translate3d(50px, 0px, 0);
+            -ms-transform: translate3d(50px, 0px, 0);
+            -o-transform: translate3d(50px, 0px, 0);
+            transform: translate3d(50px, 0px, 0);
+        }
+        .load .owl-hover>.wings>.wing-right{
+            -webkit-transform: rotateY(180deg) translate3d(47px,0px,0);
+            -moz-transform: rotateY(180deg) translate3d(47px,0px,0);
+            -ms-transform: rotateY(180deg) translate3d(47px,0px,0);
+            -o-transform: rotateY(180deg) translate3d(47px,0px,0);
+            transform: rotateY(180deg) translate3d(47px,0px,0);
+        }
+    </style>
+</head>
+<body>
+<div class="load" id="load">
+    <div class="owl" id="owl">
+        <div class="arms arm-left"></div>
+        <div class="arms arm-right"></div>
+        <div class="wings">
+            <div class="wing-left"></div>
+            <div class="wing-right"></div>
+        </div>
+    </div>
+    <div class="string"></div>
+</div>
+<script>
+    window.onload= function () {
+       var owl=document.getElementById("owl");
+        owl.onclick= function () {
+            toggleClass(owl,"owl-hover");
+        };
+    };
+    function hasClass(obj,cls){
+        return obj.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+    }
+    function addClass(obj,cls){
+        if(!hasClass(obj,cls)){
+            obj.className+=" "+cls;
+        }
+    }
+    function removeClass(obj,cls){
+        if(hasClass(obj,cls)){
+            var reg=new RegExp('(\\s|^)'+cls+'(\\s|$)');
+            obj.className=obj.className.replace(reg," ");
+        }
+    }
+    function toggleClass(obj,cls){
+        if(hasClass(obj,cls)){
+            removeClass(obj,cls);
+        }else{
+            addClass(obj,cls);
+        }
+    }
+</script>
+</body>
+</html>

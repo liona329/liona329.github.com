@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>正版注册</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            width:1366px;
+            font-family:"喵小姐简";
+        }
+        .reg-logo{
+            width:400px;
+            height:70px;
+            float:left;
+            margin-top:20px;
+        }
+        img{
+            width:100%;
+            height:100%;
+            height:100%\9;
+        }
+        .reg-img{
+            width:450px;
+            height:340px;
+            border:1px solid green;
+            float:left;
+            margin-top:10%;
+            margin-left:-200px;
+        }
+        .reg-img .img1{
+            width:100%;
+            height:160px;
+        }
+        .reg-img .img2{
+            width:100%;
+            height:180px;
+        }
+        .reg-img .img1 .img-one{
+            width:250px;
+            height:100%;
+            float:left;
+        }
+        .reg-img .img1 .img-two{
+            width:200px;
+            height:100%;
+            float:right;
+        }
+        .reg-img .img2 .img-three{
+            width:150px;
+            height:100%;
+            float:left;
+        }
+        .reg-img .img2 .img-four{
+            width:300px;
+            height:100%;
+            float:left;
+        }
+        /*注册表单样式*/
+        .reg-form{
+            width:560px;
+            height:340px;
+            float:right;
+            margin-right:80px;
+            margin-top:10%;
+            font-size:14px;
+            /*border-top:4px dashed #fff;*/
+            /*border-left:4px dashed #fff;*/
+            /*border-bottom:4px dashed #fff;*/
+            /*-webkit-border-radius: 40px;*/
+            /*-moz-border-radius: 40px;*/
+            /*border-radius: 40px;*/
+            /*-webkit-box-shadow: 0 0 10px #fff ;*/
+            /*-moz-box-shadow: 0 0 10px #fff ;*/
+            /*box-shadow: 0 0 10px #fff ;*/
+        }
+        .reg-form:hover{
+            border-top:4px dashed lightpink;
+            border-left:4px dashed lightpink;
+            border-bottom:4px dashed lightpink;
+            -webkit-border-radius: 40px;
+            -moz-border-radius: 40px;
+            border-radius: 40px;
+            -webkit-box-shadow: 0 0 10px gray ;
+            -moz-box-shadow: 0 0 10px gray ;
+            box-shadow: 0 0 10px gray ;
+        }
+        .regForm{
+            font-weight:bold;
+            padding-top:20px;
+        }
+        .regForm div{
+            margin-top:20px;
+            margin-left:15px;
+            width:560px;
+        }
+        .regForm .count{
+            margin-top:2px;
+            margin-left:100px;
+        }
+        .regForm .level{
+            margin-top:0;
+            margin-left:96px;
+        }
+        .regForm .level em{
+            display:block;
+            float:left;
+            width:36px;
+            height:20px;
+            background-color:#c4e3f3;
+            color:#fff;
+            text-align:center;
+            border:1px solid #fff;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+        .regForm .level em.active{
+            background-color:lightcoral;
+        }
+        .regForm .submitBtn{
+            width:120px;
+            height:30px;
+            background-color:lightcoral;
+            text-align:center;
+            line-height:30px;
+            color:#fff;
+            margin-top:20px;
+            margin-left:65px;
+            display:block;
+            border:none;
+            border-radius:3px;
+            font-weight:bold;
+            font-size:16px;
+        }
+        .regForm .submitBtn:hover{
+            cursor:pointer;
+        }
+        .regForm div p.msg{float:right;text-align:left;width:285px;}
+        .label-text{
+            display:block;
+            float:left;
+            width:80px;
+            line-height:26px;
+        }
+        .regForm .text{
+            width:180px;
+            height:26px;
+            line-height:26px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            margin-right:10px;
+        }
+    </style>
+</head>
+<body>
+<div class="reg-logo"><img src="image/reg-logo.png"></div>
+<div class="reg-img">
+    <div class="img1">
+        <div class="img-one">
+            <img src="">
+        </div>
+        <div class="img-two">
+            <img src="">
+        </div>
+    </div>
+    <div class="img2">
+        <div class="img-three">
+            <img src="">
+        </div>
+        <div class="img-four">
+            <img src="">
+        </div>
+    </div>
+</div>
+<div class="reg-form">
+    <form method="post" action="" class="regForm">
+        <div>
+            <label>
+                <span class="label-text">用&nbsp;户&nbsp;名：</span>
+                <input type="text" name="userName" class="text" placeholder="请输入用户名">
+            </label>
+            <p class="msg"></p>
+        </div>
+        <div class="count">
+            <label>
+            <span>
+                <b id="count"></b>
+            </span>
+            </label>
+        </div>
+        <div>
+            <label>
+                <span class="label-text">密&nbsp;&nbsp;&nbsp;&nbsp;码：</span>
+                <input type="password" name="password" class="text" placeholder="请输入密码">
+            </label>
+            <p class="msg"></p>
+        </div>
+        <div class="level">
+            <label>
+                <span></span>
+                <em class="active">弱</em>
+                <em>中</em>
+                <em>强</em>
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                <span class="label-text">确认密码：</span>
+                <input type="text" class="text" disabled name="conPassword" placeholder="请再次输入密码">
+            </label>
+            <p class="msg">
+            </p>
+        </div>
+        <div class="test">
+            <label>
+                <span class="label-text">验&nbsp;证&nbsp;码：</span>
+                <input type="text" class="text" name="verification" placeholder="大脑壳生日验证，四位数字">
+            </label>
+        </div>
+        <div>
+            <input class="submitBtn btn" type="submit" value="确认注册">
+        </div>
+    </form>
+</div>
+<script>
+    window.onload=function(){
+        var aInput=document.getElementsByTagName("input");
+        var oName=aInput[0];
+        var pwd=aInput[1];
+        var pwd2=aInput[2];
+        var aP=document.getElementsByTagName("p");
+        var name_msg=aP[0];
+        var pwd_msg=aP[1];
+        var pwd2_msg=aP[2];
+        var count=document.getElementById("count");
+        var aEm=document.getElementsByTagName("em");
+        var name_length=0;
+        //用户名匹配：数字、字母（不分大小写）、汉子、下划线
+        //5-25字符，推荐使用中文会员名。
+        // unicode \u4e00-\u9fa5   中文
+        //用户名
+        oName.onfocus=function(){
+            name_msg.style.display="block";
+            name_msg.innerHTML='<i class="ati"></i>5-25个字符';
+        };
+        oName.onkeyup=function(){
+            count.style.visibility="visible";
+            name_length=getLength(this.value);
+            count.innerHTML=name_length+"个字符";
+            if(name_length==0){
+                count.style.visibility="hidden";
+            }
+        };
+        oName.onblur=function(){
+            //是否含有非法字符
+            var re=/[^\w\u4e00-\u9fa5]/g;
+            if(re.test(this.value)){
+                //含有非法字符
+                name_msg.innerHTML='<i class="err"></i>含有非法字符';
+            }
+            //不能为空
+            else if(this.value==""){
+                name_msg.innerHTML='<i class="err"></i>不能为空';
+            }
+            //长度不能超过25
+            else if(name_length>25){
+                name_msg.innerHTML='<i class="err"></i>长度超过25个字符';
+            }
+            //长度小于6个字符
+            else if(name_length<2){
+                name_msg.innerHTML='<i class="err"></i>长度小于2个字符';
+            }
+            //OK
+            else{
+                name_msg.innerHTML='<i class="err"></i>OK!';
+            }
+        };
+        //密码
+        pwd.onfocus= function () {
+            pwd_msg.style.display="block";
+            pwd_msg.innerHTML='<i class="ati"></i>6-16个字母、数字或符号的组合密码，<br>不能单独使用字母、数字或符号';
+        };
+        pwd.onkeyup= function () {
+            //大于5个字符“中”
+            if(this.value.length>5){
+                aEm[1].className="active";
+                pwd2.removeAttribute("disabled");
+                pwd2_msg.style.display="block";
+            }else{
+                aEm[1].className="";
+                pwd2.setAttribute("disabled");
+                pwd2_msg.style.display="none";
+            }
+            //大于10个字符“强”
+            if(this.value.length>10){
+                aEm[2].className="active";
+            }else{
+                aEm[2].className="";
+            }
+        };
+        pwd.onblur= function () {
+            var m=findStr(pwd.value,pwd.value[0]);
+            var re_n=/[^/d]/g;
+            var re_w=/[^a-zA-Z]/g;
+            //不能为空
+            if(this.value==""){
+                pwd_msg.innerHTML='<i class="err"></i>不能为空';
+            }
+            //不能用相同字符
+            else if(m==this.value.length){
+                pwd_msg.innerHTML='<i class="err"></i>不能用相同字符';
+            }
+            //长度应为6-16个字符
+            else if(this.value.length<6||this.value.length>16){
+                pwd_msg.innerHTML='<i class="err"></i>长度应为6-16个字符';
+            }
+            //不能全数字
+            else if(!re_n.test(this.value)){
+                pwd_msg.innerHTML='<i class="err"></i>不能全数字';
+            }
+            //不能全字母
+            else if(!re_w.test(this.value)){
+                pwd_msg.innerHTML='<i class="err"></i>不能全字母';
+            }
+            //OK
+            else{
+                pwd_msg.innerHTML='<i class="ok"></i>OK!';
+            }
+        };
+        //确认密码
+        pwd2.onblur= function () {
+            if(this.value!=pwd.value){
+                pwd2_msg.innerHTML='<i class="err"></i>两次输入密码不一致';
+            }
+            else{
+                pwd2_msg.innerHTML='<i class="ok"></i>OK!';
+            }
+        };
+    };
+    function getLength(str){
+        //把汉字转换成两个字母，统计长度
+        return  str.replace(/[^\x00-xff]/g,"xx").length;
+    }
+    function findStr(str,n){
+        var tmp=0;
+        for(var i=0;i<str.length;i++){
+            if(str.charAt(i)==n){
+                tmp++;
+            }
+        }
+        return tmp;
+    }
+</script>
+</body>
+</html>
